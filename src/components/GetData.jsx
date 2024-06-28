@@ -1,11 +1,6 @@
-
 import PropTypes from "prop-types";
 import useAxios from "../hook/useAxios";
 import { useEffect, useMemo } from "react";
-
-GetData.propTypes = {
-  query: PropTypes.string.isRequired,
-};
 
 function GetData({ query }) {
   const memoizedQuery = useMemo(() => ({ q: query }), [query]);
@@ -32,6 +27,10 @@ function GetData({ query }) {
     </div>
   );
 }
+
+GetData.propTypes = {
+  query: PropTypes.string.isRequired,
+};
 
 export default GetData;
 
